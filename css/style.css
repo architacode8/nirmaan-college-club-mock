@@ -1,0 +1,355 @@
+/* ==========================================================================
+   NST-SDC Simple & Clean Stylesheet (Easy to Read & Explain)
+   ========================================================================== */
+
+/* 1. Brand Colors & Variables */
+:root {
+  --bg-color: #06080C;      /* Deep dark background */
+  --card-bg: #0D121D;       /* Navy card background */
+  --cyan: #00F0FF;          /* Electric Cyan Accent */
+  --text-main: #F8FAFC;     /* Bright text */
+  --text-muted: #94A3B8;    /* Subtitle text */
+  --border-cyan: rgba(0, 240, 255, 0.25); /* Subtle cyan border */
+  --radius: 8px;            /* Rounded corners */
+}
+
+/* 2. Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* 3. Container & Layout Utilities */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.tag {
+  color: var(--cyan);
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 4. Navbar */
+.site-header {
+  background: rgba(6, 8, 12, 0.95);
+  border-bottom: 1px solid var(--border-cyan);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--text-main);
+}
+
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--cyan);
+}
+
+/* 5. Buttons */
+.btn {
+  display: inline-block;
+  background: var(--cyan);
+  color: #06080C;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  background: #6df5ff;
+  text-decoration: none;
+}
+
+.btn-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--cyan);
+  border: 1px solid var(--border-cyan);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background: rgba(0, 240, 255, 0.1);
+  text-decoration: none;
+}
+
+/* 6. Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin: 0.5rem 0 1rem;
+}
+
+.hero-text p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero-video {
+  flex: 1;
+}
+
+/* 7. Responsive 16:9 YouTube Video Container */
+.video-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-cyan);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.2);
+}
+
+.video-box iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 8. Cards & Grid System */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-cyan);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* 9. Member Cards & Avatars */
+.member-card {
+  text-align: center;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #141c2c;
+  border: 2px solid var(--cyan);
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cyan);
+}
+
+.role {
+  color: var(--cyan);
+  font-size: 0.85rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* 10. Forms */
+.form-box {
+  max-width: 600px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 1px solid var(--border-cyan);
+  border-radius: var(--radius);
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  background: #06080C;
+  border: 1px solid var(--border-cyan);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  color: var(--text-main);
+  font-size: 1rem;
+  outline: none;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  border-color: var(--cyan);
+}
+
+/* 11. Social Links Bar */
+.social-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.social-bar a {
+  background: var(--card-bg);
+  border: 1px solid var(--border-cyan);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+.social-bar a:hover {
+  color: var(--cyan);
+  border-color: var(--cyan);
+}
+
+/* 12. Footer */
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border-cyan);
+  background: #040609;
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* 13. Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+    gap: 0.8rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+}

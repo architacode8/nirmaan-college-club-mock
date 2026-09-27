@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" fill="none" opacity="0.35">
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0, 240, 255, 0.05)" stroke-width="1"/>
+      <circle cx="40" cy="40" r="1" fill="rgba(0, 240, 255, 0.15)"/>
+    </pattern>
+    <linearGradient id="traceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#0088CC" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  
+  <!-- Circuit Traces -->
+  <g stroke="url(#traceGrad)" stroke-width="1.5" fill="none">
+    <path d="M 0 100 L 150 100 L 200 150 L 400 150 L 450 100 L 700 100 L 800 200" />
+    <path d="M 100 0 L 100 200 L 160 260 L 160 450 L 220 510 L 500 510 L 550 560 L 550 600" />
+    <path d="M 800 400 L 650 400 L 600 350 L 350 350 L 300 400 L 50 400 L 0 450" />
+    <path d="M 700 0 L 700 180 L 640 240 L 640 420 L 580 480 L 300 480" />
+  </g>
+  
+  <!-- Circuit Nodes -->
+  <g fill="#00F0FF">
+    <circle cx="200" cy="150" r="3" />
+    <circle cx="450" cy="100" r="3" />
+    <circle cx="160" cy="260" r="3" />
+    <circle cx="220" cy="510" r="3" />
+    <circle cx="600" cy="350" r="3" />
+    <circle cx="300" cy="400" r="3" />
+    <circle cx="640" cy="240" r="3" />
+  </g>
+</svg>
