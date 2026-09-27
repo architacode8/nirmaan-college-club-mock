@@ -41,12 +41,4 @@ A lightweight, responsive web platform built for the **Software Development Club
    cd nirmaan-college-club-mock
    ```
 
-2. Open `index.html` directly in your browser, or run a local static server:
-   ```bash
-   npx serve .
-   ```
 
----
-
-## 📄 License
-MIT License. Developed for Newton School of Technology (NST-SDC Pune).
